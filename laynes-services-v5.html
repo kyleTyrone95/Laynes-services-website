@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Layne's Services | Office Furniture Installation, Relocation & Storage — London</title>
+<meta name="description" content="London's trusted office furniture installation, relocation, removal and storage specialists. Fully insured, serving businesses across London and the South East.">
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/"}}</script>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 1000'%3E%3Cstyle%3Epath%7Bfill:%231d1d1b%7D@media(prefers-color-scheme:dark)%7Bpath%7Bfill:%23fff%7D%7D%3C/style%3E%3Cpath d='m231.65,233.92v408.78h162v127.18H63.6V233.92h168.05Z'/%3E%3Cpath d='m732.01,775.17c-122.63,0-218.77-56.77-226.34-177.14h178.65c3.03,39.36,24.22,46.18,40.88,46.18s32.55-7.57,32.55-26.5c-.76-72.67-253.59-46.18-250.57-229.37,0-107.49,90.84-163.51,205.15-163.51,129.45,0,212.71,62.07,217.26,173.35h-180.92c-1.51-32.55-18.92-42.39-37.09-42.39-13.63,0-24.22,9.08-24.22,27.25,0,67.37,249.05,56.02,249.05,221.04,0,98.41-74.94,171.08-204.39,171.08Z'/%3E%3C/svg%3E">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400&family=Space+Mono:wght@400;700&display=swap');
+
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+
+:root{
+  --bg:#ECECEA;
+  --bg-white:#F5F5F3;
+  --bg-card:#FFFFFF;
+  --bg-dark:#0A0A0A;
+  --bg-dark-card:#141414;
+  --text:#0A0A0A;
+  --text-body:#3A3A3A;
+  --text-muted:#7A7A7A;
+  --text-light:#BCBCBA;
+  --text-white:#F0F0EE;
+  --accent:#2563EB;
+  --accent-hover:#3B82F6;
+  --border:rgba(0,0,0,0.08);
+  --border-strong:rgba(0,0,0,0.15);
+  --ff:'Be Vietnam Pro',system-ui,sans-serif;
+  --mono:'Space Mono',monospace;
+  --ease-out:cubic-bezier(0.16,1,0.3,1);
+  --ease:cubic-bezier(0.25,0.1,0.25,1);
+}
+
+body.dark{
+  color-scheme:dark;
+  --bg:#111110;
+  --bg-white:#161614;
+  --bg-card:#1C1C1A;
+  --text:#F0F0EE;
+  --text-body:#A8A8A6;
+  --text-muted:#686866;
+  --text-light:#383836;
+  --border:rgba(255,255,255,0.07);
+  --border-strong:rgba(255,255,255,0.12);
+}
+body.dark .service-block:hover{background:rgba(37,99,235,0.06)}
+
+.nav-theme-btn{width:36px;height:36px;border-radius:50%;background:none;border:1px solid var(--border-strong);display:flex;align-items:center;justify-content:center;color:var(--text-muted);transition:all 0.3s;margin-left:8px;flex-shrink:0;cursor:pointer}
+.nav-theme-btn:hover{background:var(--border);color:var(--text)}
+.nav-theme-btn svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.nav-theme-btn .icon-sun{display:none}
+body.dark .nav-theme-btn .icon-sun{display:block}
+body.dark .nav-theme-btn .icon-moon{display:none}
+.nav.dark-mode .nav-theme-btn{border-color:rgba(255,255,255,0.18);color:rgba(255,255,255,0.5)}
+.nav.dark-mode .nav-theme-btn:hover{background:rgba(255,255,255,0.07);color:#fff}
+
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+body{font-family:var(--ff);background:var(--bg);color:var(--text);overflow-x:hidden;line-height:1.6}
+a{color:inherit;text-decoration:none}button{border:none;cursor:pointer;font-family:inherit}
+
+/* ===== NAV ===== */
+.nav{
+  position:fixed;top:14px;left:14px;right:14px;z-index:1000;
+  padding:0 28px;height:52px;
+  display:flex;align-items:center;justify-content:space-between;
+  background:rgba(236,236,234,0.92);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);
+  border:1px solid var(--border);border-radius:6px;transition:all 0.4s var(--ease);
+}
+.nav.dark-mode{background:rgba(10,10,10,0.94);border-color:rgba(255,255,255,0.07)}
+.nav.dark-mode .nav-full-logo{color:#fff}
+.nav.dark-mode .nav-num{color:rgba(255,255,255,0.3)}
+.nav.dark-mode .nav-link{color:rgba(255,255,255,0.6)}
+.nav.dark-mode .nav-link:hover{color:#fff}
+.nav.dark-mode .nav-hamburger span{background:#fff}
+
+.nav-full-logo{height:24px;width:auto;color:var(--text);transition:color 0.4s;display:block;flex-shrink:0}
+.nav-links{display:flex;align-items:center;gap:0}
+.nav-item{display:flex;align-items:center;padding:0 18px;height:52px;border-left:1px solid var(--border);transition:background 0.3s}
+.nav-item:last-of-type{border-right:1px solid var(--border)}
+.nav-item:hover{background:rgba(0,0,0,0.03)}
+.nav.dark-mode .nav-item{border-color:rgba(255,255,255,0.07)}
+.nav.dark-mode .nav-item:hover{background:rgba(255,255,255,0.04)}
+.nav-num{font-family:var(--mono);font-size:10px;color:var(--text-muted);margin-right:8px;letter-spacing:0.5px}
+.nav-link{font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--text-body);transition:color 0.3s}
+.nav-link:hover{color:var(--text)}
+.nav-cta{margin-left:12px;padding:0 28px;height:40px;display:flex;align-items:center;background:var(--accent);color:#fff;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;transition:all 0.3s}
+.nav-cta:hover{background:var(--accent-hover);transform:translateY(-1px)}
+.nav-hamburger{display:none;flex-direction:column;gap:5px;background:none;padding:8px}
+.nav-hamburger span{width:22px;height:1.5px;background:var(--text);transition:all 0.3s}
+
+.mobile-menu{position:fixed;top:0;right:-100%;width:100%;height:100vh;background:var(--bg);z-index:999;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:28px;transition:right 0.5s var(--ease-out)}
+.mobile-menu.open{right:0}
+.mobile-menu a{font-size:14px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--text-body)}
+.mobile-close{position:absolute;top:20px;right:20px;background:none;font-size:28px;color:var(--text)}
+
+/* ===== HERO ===== */
+.hero{position:relative;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:120px 0 0;overflow:hidden}
+
+
+.bracket{position:absolute;width:32px;height:32px;pointer-events:none}
+.bracket::before,.bracket::after{content:'';position:absolute;background:var(--accent)}
+.bracket-tl{top:32px;left:32px}.bracket-tl::before{top:0;left:0;width:32px;height:1.5px}.bracket-tl::after{top:0;left:0;width:1.5px;height:32px}
+.bracket-tr{top:32px;right:32px}.bracket-tr::before{top:0;right:0;width:32px;height:1.5px}.bracket-tr::after{top:0;right:0;width:1.5px;height:32px}
+.bracket-bl{bottom:32px;left:32px}.bracket-bl::before{bottom:0;left:0;width:32px;height:1.5px}.bracket-bl::after{bottom:0;left:0;width:1.5px;height:32px}
+.bracket-br{bottom:32px;right:32px}.bracket-br::before{bottom:0;right:0;width:32px;height:1.5px}.bracket-br::after{bottom:0;right:0;width:1.5px;height:32px}
+
+.hero-content{position:relative;z-index:2;text-align:center;max-width:1000px;margin-bottom:20px;padding:0 48px}
+.hero-title{font-size:clamp(52px,8vw,120px);font-weight:400;line-height:0.95;letter-spacing:-2px;margin-bottom:24px}
+.hero-title strong{font-weight:900}
+.verb-wrap{display:inline-block;text-align:left;vertical-align:baseline;white-space:nowrap}
+.hero-cursor{display:inline-block;width:0.06em;height:0.78em;background:var(--accent);margin-left:0.04em;vertical-align:middle;animation:blink 1s step-end infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
+.hero-subtitle{font-size:clamp(13px,1.2vw,15px);font-weight:300;line-height:1.7;color:var(--text-body);max-width:360px;margin:0 auto}
+
+.hero-render{position:relative;z-index:1;width:100%;margin-top:16px}
+.hero-render canvas{display:block;width:100%;height:auto}
+
+.hero-labels{position:absolute;bottom:40px;left:48px;right:48px;display:flex;justify-content:space-between;z-index:5}
+.hero-label{font-family:var(--mono);font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--accent)}
+
+.hero-scroll{position:absolute;bottom:72px;left:50%;transform:translateX(-50%);z-index:5;display:flex;flex-direction:column;align-items:center;gap:8px}
+.hero-scroll span{font-family:var(--mono);font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--text-muted)}
+.hero-scroll-line{width:1px;height:32px;position:relative;overflow:hidden}
+.hero-scroll-line::after{content:'';position:absolute;top:-100%;width:100%;height:100%;background:var(--accent);animation:scrollD 2s var(--ease) infinite}
+@keyframes scrollD{0%{top:-100%}50%{top:0}100%{top:100%}}
+
+/* ===== SHARED ===== */
+.section{position:relative}
+.section-pad{padding:120px 48px}
+.s-num{font-family:var(--mono);font-size:11px;color:var(--accent);letter-spacing:1px;display:block;margin-bottom:8px}
+.s-eye{font-size:11px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:var(--text-muted);margin-bottom:16px}
+.s-h{font-size:clamp(32px,4vw,52px);font-weight:300;line-height:1.1;letter-spacing:-1px}
+.s-h strong{font-weight:800}
+.s-p{font-size:15px;font-weight:300;line-height:1.75;color:var(--text-body);max-width:480px;margin-top:14px}
+
+.reveal{opacity:0;transform:translateY(28px);transition:opacity 0.7s var(--ease-out),transform 0.7s var(--ease-out)}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.rd1{transition-delay:0.06s}.rd2{transition-delay:0.12s}.rd3{transition-delay:0.18s}.rd4{transition-delay:0.24s}
+
+/* ===== SERVICES (EXPANDED) ===== */
+.section-services{background:var(--bg)}
+.services-intro{max-width:640px;margin-bottom:72px}
+.services-intro .s-p{max-width:520px}
+
+.service-block{
+  display:grid;grid-template-columns:1fr 1fr;
+  border:1px solid var(--border);max-width:1200px;margin:0 auto 2px;
+  transition:all 0.4s var(--ease);
+}
+.service-block:hover{border-color:var(--accent);background:rgba(37,99,235,0.015)}
+
+.service-block-left{padding:48px 44px;border-right:1px solid var(--border)}
+.service-block-right{padding:48px 44px;display:flex;flex-direction:column;justify-content:center}
+
+.service-block-num{font-family:var(--mono);font-size:10px;color:var(--accent);letter-spacing:1px;margin-bottom:16px}
+.service-block h3{font-size:28px;font-weight:800;letter-spacing:-0.5px;margin-bottom:12px}
+.service-block .desc{font-size:14px;font-weight:300;line-height:1.8;color:var(--text-body)}
+
+.service-details{list-style:none;display:flex;flex-direction:column;gap:14px}
+.service-details li{
+  display:flex;align-items:flex-start;gap:12px;
+  font-size:13px;font-weight:400;color:var(--text-body);line-height:1.6;
+}
+.service-details li::before{
+  content:'';flex-shrink:0;margin-top:6px;
+  width:8px;height:8px;border:1.5px solid var(--accent);
+}
+
+.service-cta{
+  display:inline-flex;align-items:center;gap:8px;margin-top:24px;
+  font-family:var(--mono);font-size:10px;letter-spacing:2px;
+  text-transform:uppercase;color:var(--accent);transition:gap 0.3s;cursor:pointer;
+}
+.service-block:hover .service-cta{gap:14px}
+.service-cta svg{width:14px;height:14px;stroke:var(--accent);fill:none;stroke-width:2}
+
+/* ===== ABOUT / EXPERIENCE ===== */
+.section-about{background:var(--bg-dark);color:var(--text-white)}
+.section-about .s-h{color:var(--text-white)}
+.section-about .s-h strong{color:#fff}
+.section-about .s-eye{color:rgba(255,255,255,0.3)}
+
+.about-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:80px;max-width:1100px;margin:0 auto;align-items:center}
+.about-text .s-h{margin-bottom:20px}
+.about-text p{font-size:15px;font-weight:300;line-height:1.85;color:rgba(255,255,255,0.5);margin-bottom:14px}
+.about-text p strong{color:rgba(255,255,255,0.8);font-weight:500}
+
+.about-stats{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid rgba(255,255,255,0.08)}
+.about-stat{padding:40px 28px;border-right:1px solid rgba(255,255,255,0.08);border-bottom:1px solid rgba(255,255,255,0.08);transition:background 0.3s}
+.about-stat:nth-child(2n){border-right:none}
+.about-stat:nth-child(n+3){border-bottom:none}
+.about-stat:hover{background:rgba(37,99,235,0.06)}
+.about-stat-num{font-size:44px;font-weight:800;color:var(--accent);line-height:1;margin-bottom:8px;letter-spacing:-1px}
+.about-stat-label{font-size:12px;font-weight:300;color:rgba(255,255,255,0.4)}
+
+/* ===== CAPABILITIES ===== */
+.section-capabilities{background:var(--bg-white);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.capabilities-grid{
+  display:grid;grid-template-columns:repeat(6,1fr);gap:0;
+  max-width:1200px;margin:0 auto;border:1px solid var(--border);
+}
+.capability{
+  padding:36px 24px;text-align:center;
+  border-right:1px solid var(--border);
+  transition:background 0.3s;
+}
+.capability:last-child{border-right:none}
+.capability:hover{background:rgba(37,99,235,0.03)}
+
+.capability-icon{
+  width:44px;height:44px;margin:0 auto 16px;
+  border:1.5px solid rgba(37,99,235,0.2);border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  transition:all 0.3s;
+}
+.capability:hover .capability-icon{border-color:var(--accent);background:rgba(37,99,235,0.06)}
+.capability-icon svg{width:18px;height:18px;stroke:var(--accent);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.capability h4{font-size:12px;font-weight:600;letter-spacing:0.5px;color:var(--text);margin-bottom:4px}
+.capability p{font-size:11px;font-weight:300;color:var(--text-muted);line-height:1.5}
+
+/* ===== PROCESS ===== */
+.section-process{background:var(--bg)}
+.process-header{text-align:center;max-width:600px;margin:0 auto 72px}
+.process-header .s-p{margin-left:auto;margin-right:auto}
+.process-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;max-width:1100px;margin:0 auto;border:1px solid var(--border)}
+.process-step{padding:44px 28px;border-right:1px solid var(--border);text-align:center;position:relative;background:var(--bg-card)}
+.process-step:last-child{border-right:none}
+.process-step::after{content:'→';position:absolute;right:-8px;top:50%;transform:translateY(-50%);font-size:16px;color:var(--text-light);z-index:1;background:var(--bg);padding:4px 0}
+.process-step:last-child::after{display:none}
+.p-num{font-family:var(--mono);font-size:48px;font-weight:700;color:rgba(37,99,235,0.08);line-height:1;margin-bottom:20px}
+.process-step h4{font-size:16px;font-weight:700;margin-bottom:8px}
+.process-step p{font-size:12px;font-weight:300;line-height:1.7;color:var(--text-body)}
+
+/* ===== CONTACT ===== */
+.section-contact{background:var(--bg-white);border-top:1px solid var(--border)}
+.contact-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:80px;max-width:1100px;margin:0 auto;align-items:start}
+.contact-info .s-h{margin-bottom:16px}
+.contact-info>p{font-size:14px;font-weight:300;line-height:1.8;color:var(--text-body);margin-bottom:36px}
+.contact-details{display:flex;flex-direction:column;gap:16px}
+.contact-item{display:flex;align-items:center;gap:14px}
+.ci-icon{width:40px;height:40px;border:1px solid var(--border-strong);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.ci-icon svg{width:16px;height:16px;stroke:var(--accent);fill:none;stroke-width:1.5}
+.ci-text{font-size:13px;color:var(--text-body)}
+.ci-text strong{display:block;color:var(--text);font-weight:600;font-size:12px;letter-spacing:0.5px;margin-bottom:1px}
+
+.contact-badge{display:inline-flex;align-items:center;gap:8px;margin-top:32px;padding:12px 20px;border:1px solid rgba(37,99,235,0.15);background:rgba(37,99,235,0.04);font-family:var(--mono);font-size:10px;color:var(--accent);letter-spacing:1px}
+.contact-badge svg{width:14px;height:14px;stroke:var(--accent);fill:none;stroke-width:2}
+
+.quote-form{background:var(--bg-card);padding:44px;border:1px solid var(--border)}
+.form-title{font-size:22px;font-weight:700;margin-bottom:4px;letter-spacing:-0.3px}
+.form-sub{font-size:12px;color:var(--text-muted);font-weight:300;margin-bottom:28px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px}
+.form-group{display:flex;flex-direction:column;gap:5px}
+.form-group.full{grid-column:1/-1}
+.form-label{font-family:var(--mono);font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-muted)}
+.form-input,.form-select,.form-textarea{width:100%;padding:12px 14px;background:var(--bg);border:1px solid var(--border-strong);color:var(--text);font-family:var(--ff);font-size:13px;font-weight:300;transition:border-color 0.3s;outline:none}
+.form-input::placeholder,.form-textarea::placeholder{color:var(--text-light)}
+.form-input:focus,.form-select:focus,.form-textarea:focus{border-color:var(--accent)}
+.form-select{cursor:pointer;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%237A7A7A' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:36px}
+.form-textarea{min-height:100px;resize:vertical}
+.form-submit{width:100%;padding:14px;background:var(--accent);color:#fff;font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;transition:all 0.3s;margin-top:4px}
+.form-submit:hover{background:var(--accent-hover);transform:translateY(-1px)}
+
+/* ===== FAQ ===== */
+.section-faq{background:var(--bg)}
+.faq-grid{display:grid;grid-template-columns:1fr 1.3fr;gap:80px;max-width:1100px;margin:0 auto}
+.faq-list{display:flex;flex-direction:column;border-top:1px solid var(--border)}
+.faq-item{border-bottom:1px solid var(--border)}
+.faq-q{width:100%;display:flex;align-items:center;justify-content:space-between;padding:20px 0;background:none;color:var(--text);font-family:var(--ff);font-size:14px;font-weight:500;text-align:left;transition:color 0.3s}
+.faq-q:hover{color:var(--accent)}
+.faq-t{font-family:var(--mono);font-size:16px;color:var(--text-muted);width:28px;height:28px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all 0.3s}
+.faq-item.open .faq-t{background:var(--accent);color:#fff;border-color:var(--accent)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height 0.5s var(--ease)}
+.faq-item.open .faq-a{max-height:200px}
+.faq-a p{padding-bottom:20px;font-size:13px;font-weight:300;line-height:1.75;color:var(--text-body)}
+
+/* ===== FOOTER ===== */
+.footer{background:var(--bg-dark);padding:72px 48px 32px;color:var(--text-white)}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;max-width:1100px;margin:0 auto 56px}
+.footer-brand .f-logo{height:20px;margin-bottom:14px}
+.footer-brand .f-logo path{fill:#fff}
+.footer-brand p{font-size:13px;font-weight:300;line-height:1.7;color:rgba(255,255,255,0.4);max-width:280px}
+.footer-col h5{font-family:var(--mono);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.25);margin-bottom:18px}
+.footer-col a{display:block;font-size:13px;font-weight:300;color:rgba(255,255,255,0.45);margin-bottom:10px;transition:color 0.3s}
+.footer-col a:hover{color:var(--accent)}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;max-width:1100px;margin:0 auto;padding-top:32px;border-top:1px solid rgba(255,255,255,0.06)}
+.footer-bottom p{font-family:var(--mono);font-size:10px;color:rgba(255,255,255,0.2);letter-spacing:1px}
+
+/* ===== LOADER ===== */
+.loader{position:fixed;top:0;left:0;width:100vw;height:100vh;background:var(--bg);z-index:10000;display:flex;flex-direction:column;align-items:center;justify-content:center;transition:opacity 0.6s,visibility 0.6s}
+.loader.hidden{opacity:0;visibility:hidden;pointer-events:none}
+.loader-logo{height:32px;margin-bottom:24px;opacity:0;animation:fadeUp 0.6s var(--ease-out) 0.2s forwards}
+.loader-logo path{fill:var(--text)}
+.loader-bar{width:80px;height:1px;background:var(--border-strong);overflow:hidden}
+.loader-bar-fill{height:100%;width:0%;background:var(--accent);transition:width 0.2s}
+@keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:1024px){
+  .service-block{grid-template-columns:1fr}
+  .service-block-left{border-right:none;border-bottom:1px solid var(--border)}
+  .about-grid{grid-template-columns:1fr;gap:48px}
+  .capabilities-grid{grid-template-columns:repeat(3,1fr)}
+  .capability:nth-child(3){border-right:none}
+  .capability:nth-child(1),.capability:nth-child(2),.capability:nth-child(3){border-bottom:1px solid var(--border)}
+  .process-steps{grid-template-columns:repeat(2,1fr)}
+  .process-step:nth-child(2){border-right:none}
+  .process-step:nth-child(1),.process-step:nth-child(2){border-bottom:1px solid var(--border)}
+  .process-step:nth-child(2)::after{display:none}
+  .contact-grid{grid-template-columns:1fr;gap:48px}
+  .faq-grid{grid-template-columns:1fr;gap:48px}
+  .footer-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:768px){
+  .nav{padding:0 16px;height:48px;top:10px;left:10px;right:10px}.nav-links{display:none}.nav-hamburger{display:flex}
+  .section-pad{padding:80px 20px}
+  .capabilities-grid{grid-template-columns:repeat(2,1fr)}
+  .capability:nth-child(2n){border-right:none}
+  .capability{border-bottom:1px solid var(--border)!important;border-right:1px solid var(--border)!important}
+  .capability:nth-child(2n){border-right:none!important}
+  .capability:nth-child(n+5){border-bottom:none!important}
+  .process-steps{grid-template-columns:1fr;border:none}
+  .process-step{border:1px solid var(--border)!important;margin-bottom:-1px}
+  .process-step::after{display:none!important}
+  .about-stats{grid-template-columns:1fr}
+  .about-stat{border-right:none!important}
+  .form-row{grid-template-columns:1fr}.quote-form{padding:28px 20px}
+  .hero{padding:100px 0 0}.hero-content{padding:0 20px}.hero-title{letter-spacing:-1px}
+  .hero-labels,.bracket{display:none}
+  .footer-grid{grid-template-columns:1fr;gap:28px}
+  .footer-bottom{flex-direction:column;gap:8px;text-align:center}
+}
+</style>
+</head>
+<body>
+
+<!-- LOADER -->
+<div class="loader" id="loader">
+  <svg class="loader-logo" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg"><path d="m231.65,233.92v408.78h162v127.18H63.6V233.92h168.05Z"/><path d="m732.01,775.17c-122.63,0-218.77-56.77-226.34-177.14h178.65c3.03,39.36,24.22,46.18,40.88,46.18s32.55-7.57,32.55-26.5c-.76-72.67-253.59-46.18-250.57-229.37,0-107.49,90.84-163.51,205.15-163.51,129.45,0,212.71,62.07,217.26,173.35h-180.92c-1.51-32.55-18.92-42.39-37.09-42.39-13.63,0-24.22,9.08-24.22,27.25,0,67.37,249.05,56.02,249.05,221.04,0,98.41-74.94,171.08-204.39,171.08Z"/></svg>
+  <div class="loader-bar"><div class="loader-bar-fill" id="loader-fill"></div></div>
+</div>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <a href="#"><svg class="nav-full-logo" viewBox="0 0 717.57 251.49" xmlns="http://www.w3.org/2000/svg"><path d="M42.72,23.32V108.13h33.61v26.39H7.85V23.32H42.72Z" fill="currentColor"/><path d="M174.33,117.71h-37.07l-5.5,16.81h-36.59L135.85,23.32h40.21l40.52,111.2h-36.75l-5.5-16.81Zm-18.53-57.17l-10.05,30.94h20.1l-10.05-30.94Z" fill="currentColor"/><path d="M232.28,23.32h39.89l17.75,39.42,17.75-39.42h39.26l-39.89,77.43v33.77h-34.87v-33.77L232.28,23.32Z" fill="currentColor"/><path d="M477.13,23.32v111.2h-34.87l-36.91-55.91v55.91h-34.87V23.32h34.87l36.91,56.86V23.32h34.87Z" fill="currentColor"/><path d="M582.66,51.12h-39.26v13.66h34.55v26.23h-34.55v15.71h39.26v27.8h-74.13V23.32h74.13v27.8Z" fill="currentColor"/><path d="M655.06,135.61c-25.44,0-45.39-11.78-46.96-36.75h37.07c.63,8.17,5.03,9.58,8.48,9.58s6.75-1.57,6.75-5.5c-.16-15.08-52.61-9.58-51.99-47.59,0-22.3,18.85-33.92,42.56-33.92,26.86,0,44.13,12.88,45.08,35.97h-37.54c-.31-6.75-3.93-8.8-7.7-8.8-2.83,0-5.03,1.88-5.03,5.65,0,13.98,51.67,11.62,51.67,45.86,0,20.42-15.55,35.5-42.41,35.5Z" fill="currentColor"/><path d="M372.01,213.34c-9.59,0-15.89-5.48-16.17-12.81h5.07c.41,3.97,3.36,8.77,11.1,8.77,6.64,0,10.55-3.9,10.55-8.84,0-14.11-26.3-5.21-26.3-23.22,0-7.4,6.1-12.81,15.34-12.81s14.59,5.07,15.41,11.64h-5.21c-.55-3.36-3.77-7.47-10.41-7.53-5.62-.07-10.28,3.01-10.28,8.56,0,13.84,26.3,5.34,26.3,23.15,0,6.51-5.27,13.08-15.41,13.08Z" fill="currentColor"/><path d="M428.52,168.89h-20.21v17.88h18.15v3.97h-18.15v18.15h20.21v3.97h-25v-47.95h25v3.97Z" fill="currentColor"/><path d="M459.2,164.98c11.1,0,16.3,6.03,16.3,13.9,0,6.58-3.7,12.12-11.78,13.63l12.33,20.34h-5.75l-11.85-20h-8.84v20h-4.79v-47.88h14.38Zm0,4.04h-9.59v19.93h9.66c7.81,0,11.3-4.25,11.3-10.07s-3.29-9.86-11.37-9.86Z" fill="currentColor"/><path d="M524.75,164.98h5.07l-18.15,47.88h-5.48l-18.15-47.88h5.21l15.69,42.67,15.82-42.67Z" fill="currentColor"/><path d="M543.85,164.98h4.79v47.88h-4.79v-47.88Z" fill="currentColor"/><path d="M587.62,164.44c10.69,0,18.63,5.34,22.06,14.52h-5.62c-2.67-6.37-8.29-10.34-16.44-10.34-10.48,0-18.49,7.74-18.49,20.28s8.01,20.21,18.49,20.21c8.15,0,13.77-3.97,16.44-10.21h5.62c-3.42,9.04-11.37,14.38-22.06,14.38-13.29,0-23.43-10-23.43-24.38s10.14-24.45,23.43-24.45Z" fill="currentColor"/><path d="M651.04,168.89h-20.21v17.88h18.15v3.97h-18.15v18.15h20.21v3.97h-25v-47.95h25v3.97Z" fill="currentColor"/><path d="M681.86,213.34c-9.59,0-15.89-5.48-16.17-12.81h5.07c.41,3.97,3.36,8.77,11.1,8.77,6.64,0,10.55-3.9,10.55-8.84,0-14.11-26.3-5.21-26.3-23.22,0-7.4,6.1-12.81,15.34-12.81s14.59,5.07,15.41,11.64h-5.21c-.55-3.36-3.77-7.47-10.41-7.53-5.62-.07-10.27,3.01-10.27,8.56,0,13.84,26.3,5.34,26.3,23.15,0,6.51-5.27,13.08-15.41,13.08Z" fill="currentColor"/></svg></a>
+  <div class="nav-links">
+    <a href="#services" class="nav-item"><span class="nav-num">1.0</span><span class="nav-link">Services</span></a>
+    <a href="#about" class="nav-item"><span class="nav-num">2.0</span><span class="nav-link">About</span></a>
+    <a href="#process" class="nav-item"><span class="nav-num">3.0</span><span class="nav-link">Process</span></a>
+    <a href="#faq" class="nav-item"><span class="nav-num">4.0</span><span class="nav-link">FAQ</span></a>
+    <button class="nav-theme-btn" id="theme-btn" aria-label="Toggle dark mode">
+      <svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+      <svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+    </button>
+    <a href="#contact" class="nav-cta">Get Quote</a>
+  </div>
+  <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+
+<div class="mobile-menu" id="mobile-menu">
+  <button class="mobile-close" id="mobile-close">&times;</button>
+  <a href="#services" onclick="closeMobile()">Services</a>
+  <a href="#about" onclick="closeMobile()">About</a>
+  <a href="#process" onclick="closeMobile()">Process</a>
+  <a href="#faq" onclick="closeMobile()">FAQ</a>
+  <a href="#contact" onclick="closeMobile()">Get a Quote</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="bracket bracket-tl"></div><div class="bracket bracket-tr"></div><div class="bracket bracket-bl"></div><div class="bracket bracket-br"></div>
+  <div class="hero-content">
+    <h1 class="hero-title">We <span class="verb-wrap" id="verb-wrap"><strong id="hero-verb">Install</strong><span class="hero-cursor"></span></span><br>office furniture</h1>
+    <p class="hero-subtitle">Trusted by UK businesses for over six years.</p>
+  </div>
+  <div class="hero-render" id="hero-svg-wrap"></div>
+  <div class="hero-labels"><span class="hero-label">Efficiency</span><span class="hero-label">Precision</span><span class="hero-label">Reliability</span></div>
+  <div class="hero-scroll"><span>Scroll</span><div class="hero-scroll-line"></div></div>
+</section>
+
+<!-- SERVICES (EXPANDED) -->
+<section class="section section-services section-pad" id="services">
+  <div class="services-intro reveal">
+    <span class="s-num">01</span>
+    <div class="s-eye">Services</div>
+    <h2 class="s-h">Everything your<br>office <strong>needs</strong></h2>
+    <p class="s-p">From a single desk to a full floor fit-out, we handle the heavy lifting so your team can focus on work.</p>
+  </div>
+
+  <div class="service-block reveal">
+    <div class="service-block-left">
+      <div class="service-block-num">1.1</div>
+      <h3>Furniture Installation</h3>
+      <p class="desc">We assemble and install office furniture from all major manufacturers — desks, task chairs, partitions, meeting tables, storage units, and breakout furniture. Every piece placed exactly where it needs to be.</p>
+      <a href="#contact" class="service-cta">Get a quote <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    </div>
+    <div class="service-block-right">
+      <ul class="service-details">
+        <li>All major brands: Herman Miller, Steelcase, Senator, Sedus, and 50+ more</li>
+        <li>Weekend and evening installs at no extra cost</li>
+        <li>Single desks to full floor fit-outs — any scale</li>
+        <li>Dedicated project manager for every job</li>
+        <li>All packaging removed and disposed of on-site</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="service-block reveal">
+    <div class="service-block-left">
+      <div class="service-block-num">1.2</div>
+      <h3>Office Relocation</h3>
+      <p class="desc">Moving office? We manage the entire process — planning, packing, transport, and reinstallation at your new location. Your team leaves one office on Friday and walks into a fully set-up space on Monday.</p>
+      <a href="#contact" class="service-cta">Get a quote <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    </div>
+    <div class="service-block-right">
+      <ul class="service-details">
+        <li>End-to-end move management from survey to sign-off</li>
+        <li>IT and equipment coordination available</li>
+        <li>Floor plan configuration at the new space</li>
+        <li>Moves done out-of-hours to avoid business disruption</li>
+        <li>Fully insured with goods-in-transit cover</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="service-block reveal">
+    <div class="service-block-left">
+      <div class="service-block-num">1.3</div>
+      <h3>Warehousing & Storage</h3>
+      <p class="desc">Need to store furniture during a refit, between moves, or while you figure out what to do with it? We offer secure, climate-controlled warehousing with flexible terms.</p>
+      <a href="#contact" class="service-cta">Get a quote <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    </div>
+    <div class="service-block-right">
+      <ul class="service-details">
+        <li>Secure, climate-controlled facility</li>
+        <li>Flexible terms — short or long-term</li>
+        <li>Inventory tracking so you know exactly what's stored</li>
+        <li>Collection, delivery, and reinstallation when you're ready</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="service-block reveal">
+    <div class="service-block-left">
+      <div class="service-block-num">1.4</div>
+      <h3>Removal & Disposal</h3>
+      <p class="desc">Old furniture taking up space? We'll remove it responsibly — recycling what we can, donating what's usable, and disposing of the rest in compliance with waste regulations.</p>
+      <a href="#contact" class="service-cta">Get a quote <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    </div>
+    <div class="service-block-right">
+      <ul class="service-details">
+        <li>Eco-friendly disposal — we recycle and donate where possible</li>
+        <li>Full clearance for end-of-lease situations</li>
+        <li>Waste transfer documentation provided for your records</li>
+        <li>Same-day removal available for urgent jobs</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT / EXPERIENCE -->
+<section class="section section-about section-pad" id="about">
+  <div class="about-grid">
+    <div class="about-text reveal">
+      <span class="s-num">02</span>
+      <div class="s-eye">About</div>
+      <h2 class="s-h">Years of experience.<br><strong>Hundreds</strong> of projects.</h2>
+      <p>Layne's Services has been helping London businesses set up, move, and maintain their workspaces since <strong>2018</strong>. What started as a small team with a van has grown into a trusted operation with a proven track record across offices of all sizes.</p>
+      <p>We've completed <strong>over 500 projects</strong> — from single-desk installs for startups to full-floor fit-outs for established companies. Every job gets the same level of care: a clear plan, a reliable team, and a workspace that's ready when you need it.</p>
+    </div>
+    <div class="about-stats">
+      <div class="about-stat reveal rd1"><div class="about-stat-num">500+</div><div class="about-stat-label">Projects completed</div></div>
+      <div class="about-stat reveal rd2"><div class="about-stat-num">6yr</div><div class="about-stat-label">In business since 2018</div></div>
+      <div class="about-stat reveal rd3"><div class="about-stat-num">24hr</div><div class="about-stat-label">Quote turnaround</div></div>
+      <div class="about-stat reveal rd4"><div class="about-stat-num">0</div><div class="about-stat-label">Hidden fees or surprises</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CAPABILITIES -->
+<section class="section section-capabilities">
+  <div class="capabilities-grid">
+    <div class="capability reveal rd1">
+      <div class="capability-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+      <h4>Fully Insured</h4>
+      <p>Public liability & goods-in-transit cover</p>
+    </div>
+    <div class="capability reveal rd2">
+      <div class="capability-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      <h4>London & South East</h4>
+      <p>Covering all of Greater London and beyond</p>
+    </div>
+    <div class="capability reveal rd3">
+      <div class="capability-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+      <h4>Weekends & Evenings</h4>
+      <p>Out-of-hours work at no extra cost</p>
+    </div>
+    <div class="capability reveal rd4">
+      <div class="capability-icon"><svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="8.5" cy="7" r="4"/><path d="M20 8v6M23 11h-6"/></svg></div>
+      <h4>Dedicated Manager</h4>
+      <p>One point of contact for every project</p>
+    </div>
+    <div class="capability reveal rd1">
+      <div class="capability-icon"><svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg></div>
+      <h4>Any Manufacturer</h4>
+      <p>Herman Miller, Steelcase, Senator & 50+ more</p>
+    </div>
+    <div class="capability reveal rd2">
+      <div class="capability-icon"><svg viewBox="0 0 24 24"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M8 12l3 3 5-5"/></svg></div>
+      <h4>No Hidden Fees</h4>
+      <p>Fixed-price quotes, no surprises</p>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="section section-process section-pad" id="process">
+  <div class="process-header reveal">
+    <span class="s-num">03</span>
+    <div class="s-eye">Process</div>
+    <h2 class="s-h">Simple, transparent<br><strong>workflow</strong></h2>
+    <p class="s-p">From first call to final walkthrough — here's how every project works.</p>
+  </div>
+  <div class="process-steps">
+    <div class="process-step reveal rd1"><div class="p-num">01</div><h4>Consultation</h4><p>Tell us what you need. We'll discuss scope, timeline, and any special requirements. Free, no-obligation.</p></div>
+    <div class="process-step reveal rd2"><div class="p-num">02</div><h4>Site Survey & Quote</h4><p>We visit your space, assess access and logistics, and deliver a detailed fixed-price quote — usually within 24 hours.</p></div>
+    <div class="process-step reveal rd3"><div class="p-num">03</div><h4>Delivery & Install</h4><p>Our team arrives on schedule, handles everything with care, and keeps disruption to an absolute minimum.</p></div>
+    <div class="process-step reveal rd4"><div class="p-num">04</div><h4>Final Walkthrough</h4><p>We walk through the finished space together. We don't leave until you're completely satisfied.</p></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section section-contact section-pad" id="contact">
+  <div class="contact-grid">
+    <div class="contact-info reveal">
+      <span class="s-num">04</span>
+      <div class="s-eye">Contact</div>
+      <h2 class="s-h">Let's talk about<br>your <strong>project</strong></h2>
+      <p>Whether it's a quick question or a full brief, we'd love to hear from you. Most quotes delivered within 24 hours.</p>
+      <div class="contact-details">
+        <div class="contact-item"><div class="ci-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div><div class="ci-text"><strong>Phone</strong>020 XXXX XXXX</div></div>
+        <div class="contact-item"><div class="ci-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg></div><div class="ci-text"><strong>Email</strong>info@laynesservices.co.uk</div></div>
+        <div class="contact-item"><div class="ci-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div class="ci-text"><strong>Coverage</strong>London & South East England</div></div>
+      </div>
+      <div class="contact-badge"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-5"/></svg>Free quotes — usually within 24 hours</div>
+    </div>
+    <div class="quote-form reveal rd2">
+      <h3 class="form-title">Request a Quote</h3>
+      <p class="form-sub">Fill in the details and we'll respond shortly.</p>
+      <form onsubmit="handleSubmit(event)">
+        <div class="form-row"><div class="form-group"><label class="form-label">Full Name</label><input class="form-input" type="text" placeholder="Your name" required></div><div class="form-group"><label class="form-label">Company</label><input class="form-input" type="text" placeholder="Company name"></div></div>
+        <div class="form-row"><div class="form-group"><label class="form-label">Email</label><input class="form-input" type="email" placeholder="your@email.com" required></div><div class="form-group"><label class="form-label">Phone</label><input class="form-input" type="tel" placeholder="Phone number"></div></div>
+        <div class="form-row"><div class="form-group full"><label class="form-label">Service</label><select class="form-select"><option value="">Select a service</option><option>Furniture Installation</option><option>Office Relocation</option><option>Warehousing & Storage</option><option>Removal & Disposal</option><option>Multiple Services</option></select></div></div>
+        <div class="form-row"><div class="form-group full"><label class="form-label">Project Details</label><textarea class="form-textarea" placeholder="Tell us about your project — number of items, timeline, any special requirements..."></textarea></div></div>
+        <button type="submit" class="form-submit">Send Enquiry</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section section-faq section-pad" id="faq">
+  <div class="faq-grid">
+    <div class="reveal">
+      <span class="s-num">05</span>
+      <div class="s-eye">FAQ</div>
+      <h2 class="s-h">Common<br><strong>questions</strong></h2>
+      <p class="s-p" style="margin-top:14px">Can't find your answer here? Just get in touch — we're happy to help.</p>
+    </div>
+    <div class="faq-list reveal rd1">
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">What areas do you cover?<span class="faq-t">+</span></button><div class="faq-a"><p>All of Greater London and the South East of England. For projects outside this area, get in touch and we'll do our best to accommodate.</p></div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Do you work weekends and out of hours?<span class="faq-t">+</span></button><div class="faq-a"><p>Yes — in fact, most of our installations are done over weekends or evenings to minimise disruption to your business. There's no extra charge for this.</p></div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Can you install any manufacturer's furniture?<span class="faq-t">+</span></button><div class="faq-a"><p>Absolutely. We have experience with all major office furniture brands including Herman Miller, Steelcase, Senator, Sedus, and many more. If you're unsure, just ask.</p></div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">How quickly can you provide a quote?<span class="faq-t">+</span></button><div class="faq-a"><p>Most quotes are delivered within 24 hours of our site survey. For straightforward jobs, we can often give a ballpark estimate over the phone the same day.</p></div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Do you handle disposal and recycling?<span class="faq-t">+</span></button><div class="faq-a"><p>Yes. We offer responsible disposal, recycling, and donation services. We aim to divert as much furniture as possible from landfill and provide waste transfer documentation for your records.</p></div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Are you fully insured?<span class="faq-t">+</span></button><div class="faq-a"><p>Yes. We carry comprehensive public liability insurance and goods-in-transit cover for every project. Certificates are available on request.</p></div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">What does a typical installation involve?<span class="faq-t">+</span></button><div class="faq-a"><p>We arrive at the agreed time, unbox and assemble all furniture, place it according to your floor plan, and remove all packaging. We then do a walkthrough with you to make sure everything is right.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <svg class="f-logo" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg"><path d="m231.65,233.92v408.78h162v127.18H63.6V233.92h168.05Z"/><path d="m732.01,775.17c-122.63,0-218.77-56.77-226.34-177.14h178.65c3.03,39.36,24.22,46.18,40.88,46.18s32.55-7.57,32.55-26.5c-.76-72.67-253.59-46.18-250.57-229.37,0-107.49,90.84-163.51,205.15-163.51,129.45,0,212.71,62.07,217.26,173.35h-180.92c-1.51-32.55-18.92-42.39-37.09-42.39-13.63,0-24.22,9.08-24.22,27.25,0,67.37,249.05,56.02,249.05,221.04,0,98.41-74.94,171.08-204.39,171.08Z"/></svg>
+      <p>London's trusted workspace partner. Professional furniture installation, relocation, and storage since 2018.</p>
+    </div>
+    <div class="footer-col"><h5>Services</h5><a href="#services">Installation</a><a href="#services">Relocation</a><a href="#services">Storage</a><a href="#services">Removal</a></div>
+    <div class="footer-col"><h5>Company</h5><a href="#about">About Us</a><a href="#process">How We Work</a><a href="#faq">FAQ</a></div>
+    <div class="footer-col"><h5>Contact</h5><a href="tel:+447XXXXXXXXX">020 XXXX XXXX</a><a href="mailto:info@laynesservices.co.uk">info@laynesservices.co.uk</a><a href="#contact">Get a Quote</a></div>
+  </div>
+  <div class="footer-bottom"><p>&copy; 2026 Layne's Services Ltd.</p><p>London & South East</p></div>
+</footer>
+
+<!-- SCRIPTS -->
+<script>
+(function(){
+// Theme init — apply before loader clears to avoid flash
+if(localStorage.getItem('theme')==='dark') document.body.classList.add('dark');
+
+// Loader
+const lf=document.getElementById('loader-fill'),ld=document.getElementById('loader');let lp=0;
+function runLoader(){lp+=Math.random()*20+8;if(lp>=100){lp=100;lf.style.width='100%';setTimeout(()=>ld.classList.add('hidden'),300)}else{lf.style.width=lp+'%';setTimeout(runLoader,100+Math.random()*150)}}
+setTimeout(runLoader,200);
+
+// Mobile
+window.closeMobile=function(){document.getElementById('mobile-menu').classList.remove('open')};
+document.getElementById('nav-hamburger').addEventListener('click',()=>document.getElementById('mobile-menu').classList.add('open'));
+document.getElementById('mobile-close').addEventListener('click',closeMobile);
+
+// FAQ
+window.toggleFaq=function(b){const i=b.parentElement;const w=i.classList.contains('open');document.querySelectorAll('.faq-item').forEach(x=>x.classList.remove('open'));if(!w)i.classList.add('open')};
+
+// Form
+window.handleSubmit=function(e){e.preventDefault();const b=e.target.querySelector('.form-submit');b.textContent="Sent! We'll be in touch.";b.style.background='#16a34a';setTimeout(()=>{b.textContent='Send Enquiry';b.style.background='';e.target.reset()},3000)};
+
+// Reveal
+const ro=new IntersectionObserver(e=>e.forEach(en=>{if(en.isIntersecting)en.target.classList.add('visible')}),{threshold:0.08,rootMargin:'0px 0px -20px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>ro.observe(el));
+
+// Nav dark mode
+const navEl=document.getElementById('nav');
+const darkSections=document.querySelectorAll('.section-about,.footer');
+function checkNav(){
+  if(document.body.classList.contains('dark')){navEl.classList.add('dark-mode');return}
+  let d=false;darkSections.forEach(s=>{const r=s.getBoundingClientRect();if(r.top<66&&r.bottom>66)d=true});navEl.classList.toggle('dark-mode',d)
+}
+window.addEventListener('scroll',checkNav,{passive:true});checkNav();
+
+// Theme toggle
+document.getElementById('theme-btn').addEventListener('click',()=>{
+  const isDark=document.body.classList.toggle('dark');
+  localStorage.setItem('theme',isDark?'dark':'light');
+  checkNav();
+});
+
+// Hero verb typewriter
+(function(){
+  const verbs=['Install','Remove','Store','Relocate'];
+  let vi=0,ci=0,deleting=false;
+  const el=document.getElementById('hero-verb');
+  const wrap=document.getElementById('verb-wrap');
+  if(!el||!wrap)return;
+
+  // Lock the wrap width to the widest verb so surrounding text never shifts
+  let maxW=0;
+  verbs.forEach(v=>{el.textContent=v;const w=el.getBoundingClientRect().width;if(w>maxW)maxW=w});
+  wrap.style.minWidth=maxW+'px';
+  el.textContent=verbs[0];ci=verbs[0].length;
+
+  function tick(){
+    const cur=verbs[vi];
+    if(deleting){
+      ci--;
+      el.textContent=cur.slice(0,ci);
+      if(ci===0){deleting=false;vi=(vi+1)%verbs.length;setTimeout(tick,380);return}
+      setTimeout(tick,52);
+    }else{
+      ci++;
+      el.textContent=cur.slice(0,ci);
+      if(ci===cur.length){deleting=true;setTimeout(tick,2200);return}
+      setTimeout(tick,90);
+    }
+  }
+  // Start deleting initial word after a pause
+  setTimeout(()=>{deleting=true;tick();},2400);
+})();
+
+
+})();
+</script>
+
+<script type="module">
+import * as THREE from 'three';
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+
+const wrap = document.getElementById('hero-svg-wrap');
+if (!wrap) throw new Error('no wrap');
+
+// ── Scene ──────────────────────────────────────────────────────────────────
+const scene = new THREE.Scene();
+const isDark = () => document.body.classList.contains('dark');
+const getBg  = () => new THREE.Color(isDark() ? 0x111110 : 0xECECEA);
+
+scene.background = getBg();
+
+// ── Renderer ───────────────────────────────────────────────────────────────
+const renderer = new THREE.WebGLRenderer({ antialias: true });
+renderer.shadowMap.enabled = true;
+renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
+renderer.outputColorSpace = THREE.SRGBColorSpace;
+renderer.toneMapping = THREE.ACESFilmicToneMapping;
+renderer.toneMappingExposure = 1.1;
+wrap.appendChild(renderer.domElement);
+renderer.domElement.style.cssText = 'display:block;width:100%;height:auto;';
+
+// ── Camera ─────────────────────────────────────────────────────────────────
+const camera = new THREE.PerspectiveCamera(42, 16 / 9, 0.01, 50000);
+
+// ── Resize ─────────────────────────────────────────────────────────────────
+function resize() {
+  const w = wrap.clientWidth || window.innerWidth;
+  const h = Math.round(w * (9 / 16));
+  renderer.setSize(w, h);
+  camera.aspect = w / h;
+  camera.updateProjectionMatrix();
+}
+requestAnimationFrame(resize);
+window.addEventListener('resize', resize);
+
+// ── Lights ─────────────────────────────────────────────────────────────────
+scene.add(new THREE.HemisphereLight(0xffffff, 0xd0d0cc, 0.6));
+
+const sun = new THREE.DirectionalLight(0xffffff, 1.8);
+sun.castShadow = true;
+sun.shadow.mapSize.width  = 2048;
+sun.shadow.mapSize.height = 2048;
+sun.shadow.radius = 8;
+sun.shadow.bias = -0.0005;
+sun.shadow.normalBias = 0.05;
+scene.add(sun);
+scene.add(sun.target);
+
+// ── Camera base position & target ───────────────────────────────────────────
+const BASE_POS    = new THREE.Vector3(-3.36, 1.69, -0.38);
+const BASE_TARGET = new THREE.Vector3( 3.07, -0.63, -0.24);
+camera.position.copy(BASE_POS);
+camera.lookAt(BASE_TARGET);
+
+// ── Mouse parallax ──────────────────────────────────────────────────────────
+const mouse = { x: 0, y: 0 };
+const smoothMouse = { x: 0, y: 0 };
+const PARALLAX_STRENGTH = 0.18; // units of offset at full mouse range
+
+wrap.addEventListener('mousemove', e => {
+  const r = wrap.getBoundingClientRect();
+  mouse.x = ((e.clientX - r.left) / r.width  - 0.5) * 2;
+  mouse.y = ((e.clientY - r.top)  / r.height - 0.5) * 2;
+});
+wrap.addEventListener('mouseleave', () => { mouse.x = 0; mouse.y = 0; });
+
+// ── Render loop ─────────────────────────────────────────────────────────────
+(function animate() {
+  requestAnimationFrame(animate);
+
+  // Smooth lerp toward current mouse
+  smoothMouse.x += (mouse.x - smoothMouse.x) * 0.06;
+  smoothMouse.y += (mouse.y - smoothMouse.y) * 0.06;
+
+  camera.position.set(
+    BASE_POS.x + smoothMouse.x * PARALLAX_STRENGTH,
+    BASE_POS.y - smoothMouse.y * PARALLAX_STRENGTH * 0.5,
+    BASE_POS.z
+  );
+  camera.lookAt(BASE_TARGET);
+
+  renderer.render(scene, camera);
+})();
+
+// ── Floor plane (shadow receiver) ──────────────────────────────────────────
+const floorMat = new THREE.ShadowMaterial({ opacity: 0.25, transparent: true });
+const floor = new THREE.Mesh(new THREE.PlaneGeometry(300, 300), floorMat);
+floor.rotation.x = -Math.PI / 2;
+floor.receiveShadow = true;
+scene.add(floor);
+
+// ── Load scene ─────────────────────────────────────────────────────────────
+const lightGrey = new THREE.MeshStandardMaterial({
+  color: 0xC8C8C6,
+  roughness: 0.6,
+  metalness: 0.04,
+  side: THREE.DoubleSide,
+  shadowSide: THREE.FrontSide,
+});
+
+new GLTFLoader().load('images/3d_models/scene-1-view.glb', gltf => {
+  const model = gltf.scene;
+
+  model.traverse(n => {
+    if (!n.isMesh) return;
+    n.castShadow = true;
+    n.receiveShadow = true;
+    n.material = lightGrey;
+  });
+
+  scene.add(model);
+
+  // Compute actual scene bounds and use them to position everything correctly
+  const box    = new THREE.Box3().setFromObject(model);
+  const center = box.getCenter(new THREE.Vector3());
+  const size   = box.getSize(new THREE.Vector3());
+  console.log('Scene bounds — center:', center, 'size:', size, 'min.y:', box.min.y);
+
+  // Snap floor to actual bottom of scene
+  floor.position.y = box.min.y;
+
+  // Light directly above and slightly to the right (+X), in front (-Z)
+  const span = Math.max(size.x, size.z);
+  sun.position.set(center.x + span * 0.4, size.y * 3, center.z - span * 0.2);
+  sun.target.position.copy(center);
+  sun.target.updateMatrixWorld();
+
+  // Fit shadow frustum tightly around the scene
+  const half = span * 0.75;
+  Object.assign(sun.shadow.camera, {
+    left: -half, right: half, top: half, bottom: -half,
+    near: 1, far: size.y * 4 + span
+  });
+  sun.shadow.camera.updateProjectionMatrix();
+
+}, undefined, e => console.error('3D scene:', e));
+
+// ── Dark mode sync ──────────────────────────────────────────────────────────
+new MutationObserver(() => { scene.background = getBg(); })
+  .observe(document.body, { attributes: true, attributeFilter: ['class'] });
+</script>
+</body>
+</html>
