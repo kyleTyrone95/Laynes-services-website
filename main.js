@@ -446,6 +446,7 @@
       lightboxImg.src = img.src;
       lightboxImg.alt = img.alt;
       lightbox.classList.add('active');
+      document.body.classList.add('lightbox-open');
       document.body.style.overflow = 'hidden';
       if (window.__lenis) window.__lenis.stop();
     });
@@ -453,6 +454,7 @@
 
   function closeLightbox() {
     lightbox.classList.remove('active');
+    document.body.classList.remove('lightbox-open');
     document.body.style.overflow = '';
     if (window.__lenis) window.__lenis.start();
   }

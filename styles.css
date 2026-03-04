@@ -1365,6 +1365,13 @@ h1, h2, h3, h4, h5, h6 {
   visibility: visible;
 }
 
+body.lightbox-open .nav,
+body.lightbox-open .hero,
+body.lightbox-open .content,
+body.lightbox-open .footer {
+  visibility: hidden;
+}
+
 .lightbox-img {
   max-width: 90vw;
   max-height: 85vh;
