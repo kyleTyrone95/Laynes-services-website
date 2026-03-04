@@ -879,7 +879,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Asymmetric grid — v3 style */
 .cases-grid {
   display: grid;
-  grid-template-columns: 1.3fr 0.7fr;
+  grid-template-columns: 1fr 1fr;
   gap: 24px;
 }
 
@@ -1490,7 +1490,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .content {
-    margin-top: -5vh;
+    margin-top: -7.5vh;
   }
 
   .section-statement {
@@ -1562,6 +1562,10 @@ h1, h2, h3, h4, h5, h6 {
 
   .case-card-sm .case-img-wrap {
     aspect-ratio: 4 / 3;
+  }
+
+  .hero-scroll {
+    display: none;
   }
 
   .partner-heading {
