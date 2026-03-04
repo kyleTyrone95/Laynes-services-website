@@ -317,23 +317,6 @@ h1, h2, h3, h4, h5, h6 {
   clip-path: circle(150% at calc(100% - 52px) 42px);
 }
 
-/* Solid backdrop behind overlay to cover any viewport gaps */
-.nav-backdrop {
-  position: fixed;
-  top: -50vh;
-  left: -10vw;
-  width: 120vw;
-  height: 200vh;
-  background: #000;
-  z-index: 1000;
-  pointer-events: none;
-  opacity: 0;
-  transition: opacity 0.4s;
-}
-
-.nav-backdrop.active {
-  opacity: 1;
-}
 
 .nav-overlay-inner {
   display: flex;
@@ -1590,8 +1573,22 @@ h1, h2, h3, h4, h5, h6 {
     grid-column: 1 / -1;
   }
 
+  .nav {
+    position: absolute;
+    mix-blend-mode: normal;
+  }
+
+  .nav.nav-hidden {
+    top: 0;
+    opacity: 1;
+  }
+
   .nav-bar {
     padding: 24px;
+  }
+
+  .nav-overlay {
+    position: fixed;
   }
 
   .nav-overlay-inner {
