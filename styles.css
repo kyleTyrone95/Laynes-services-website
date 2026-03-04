@@ -305,10 +305,10 @@ h1, h2, h3, h4, h5, h6 {
 /* Overlay */
 .nav-overlay {
   position: fixed;
-  top: 0;
+  top: -50px;
   left: 0;
   right: 0;
-  height: calc(100vh + 100px);
+  bottom: -50px;
   background: var(--text);
   clip-path: circle(0% at calc(100% - 52px) 42px);
   transition: clip-path 0.8s var(--ease-out);
