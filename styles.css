@@ -1583,6 +1583,30 @@ h1, h2, h3, h4, h5, h6 {
     opacity: 1;
   }
 
+  .nav-logo img {
+    filter: brightness(0);
+  }
+
+  .nav.overlay-open .nav-logo img {
+    filter: brightness(0) invert(1);
+  }
+
+  .nav-toggle {
+    color: var(--text);
+  }
+
+  .nav.overlay-open .nav-toggle {
+    color: var(--bg);
+  }
+
+  .nav-burger span {
+    background: var(--text);
+  }
+
+  .nav.overlay-open .nav-burger span {
+    background: var(--bg);
+  }
+
   .nav-bar {
     padding: 24px;
   }
