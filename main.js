@@ -95,23 +95,15 @@
   });
 
   /* Hide nav on scroll down, show on scroll up */
-  let lastScrollY = window.scrollY;
+  let lastY = 0;
 
-  function checkNavVisibility() {
+  window.addEventListener('scroll', () => {
     if (nav.classList.contains('overlay-open')) return;
-    const currentY = window.scrollY;
-    const delta = currentY - lastScrollY;
-
-    if (delta > 10 && currentY > 100) {
-      nav.classList.add('nav-hidden');
-    } else if (delta < -3) {
-      nav.classList.remove('nav-hidden');
-    }
-
-    lastScrollY = currentY;
-  }
-
-  window.addEventListener('scroll', checkNavVisibility, { passive: true });
+    const y = window.scrollY;
+    if (y > lastY && y > 80) nav.classList.add('nav-hidden');
+    else nav.classList.remove('nav-hidden');
+    lastY = y;
+  }, { passive: true });
 })();
 
 
