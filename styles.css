@@ -305,11 +305,8 @@ h1, h2, h3, h4, h5, h6 {
 /* Overlay */
 .nav-overlay {
   position: fixed;
-  top: -50px;
-  left: 0;
-  right: 0;
-  bottom: -50px;
-  background: var(--text);
+  inset: 0;
+  background: rgba(0, 0, 0, 0.99);
   clip-path: circle(0% at calc(100% - 52px) 42px);
   transition: clip-path 0.8s var(--ease-out);
   z-index: 1001;
@@ -325,8 +322,10 @@ h1, h2, h3, h4, h5, h6 {
   flex-direction: column;
   justify-content: center;
   height: 100vh;
+  height: -webkit-fill-available;
   height: 100dvh;
   padding: 120px 60px 60px;
+  padding-bottom: calc(60px + env(safe-area-inset-bottom, 0px));
 }
 
 .nav-links {
