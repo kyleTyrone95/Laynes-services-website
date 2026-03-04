@@ -71,6 +71,8 @@
     link.innerHTML = `<span>${text}</span>`;
   });
 
+  const logoImg = nav.querySelector('.nav-logo img');
+
   toggle.addEventListener('click', () => {
     const isOpen = nav.classList.contains('overlay-open');
 
@@ -78,10 +80,17 @@
       nav.classList.remove('overlay-open');
       document.body.style.overflow = '';
       if (window.__lenis) window.__lenis.start();
+      /* Restore logo based on current scroll position */
+      if (logoImg) {
+        const onDark = nav.classList.contains('nav-dark');
+        logoImg.src = onDark ? 'images/full_logo_white.svg' : 'images/full_logo_black.svg';
+      }
     } else {
       nav.classList.add('overlay-open');
       document.body.style.overflow = 'hidden';
       if (window.__lenis) window.__lenis.stop();
+      /* White logo on dark overlay */
+      if (logoImg) logoImg.src = 'images/full_logo_white.svg';
     }
   });
 
@@ -94,10 +103,11 @@
     });
   });
 
-  /* Blend mode only on dark sections (partner CTA) */
+  /* Swap nav colors on dark sections (partner CTA) */
   const darkSections = document.querySelectorAll('.section-partner');
-  if (darkSections.length) {
-    function checkBlend() {
+  const navLogoImg = nav.querySelector('.nav-logo img');
+  if (darkSections.length && navLogoImg) {
+    function checkNavDark() {
       if (nav.classList.contains('overlay-open')) return;
       const navH = nav.offsetHeight;
       let onDark = false;
@@ -105,10 +115,11 @@
         const r = sec.getBoundingClientRect();
         if (r.top < navH && r.bottom > 0) onDark = true;
       });
-      nav.classList.toggle('nav-blend', onDark);
+      nav.classList.toggle('nav-dark', onDark);
+      navLogoImg.src = onDark ? 'images/full_logo_white.svg' : 'images/full_logo_black.svg';
     }
-    window.addEventListener('scroll', checkBlend, { passive: true });
-    checkBlend();
+    window.addEventListener('scroll', checkNavDark, { passive: true });
+    checkNavDark();
   }
 })();
 

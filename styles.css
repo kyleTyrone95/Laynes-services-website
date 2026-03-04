@@ -220,12 +220,12 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 1000;
 }
 
-.nav.nav-blend {
-  mix-blend-mode: difference;
+.nav.nav-dark .nav-toggle {
+  color: var(--bg);
 }
 
-.nav.overlay-open {
-  mix-blend-mode: normal;
+.nav.overlay-open .nav-toggle {
+  color: var(--bg);
 }
 
 .nav-bar {
@@ -239,7 +239,6 @@ h1, h2, h3, h4, h5, h6 {
   display: block;
   height: 36px;
   width: auto;
-  color: var(--bg);
   z-index: 1002;
   transition: opacity 0.3s;
 }
@@ -258,11 +257,11 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   align-items: center;
   gap: 12px;
-  color: var(--bg);
+  color: var(--text);
   z-index: 1002;
   padding: 0;
   cursor: pointer;
-  transition: opacity 0.3s;
+  transition: opacity 0.3s, color 0.3s;
 }
 
 .nav-toggle:hover {
