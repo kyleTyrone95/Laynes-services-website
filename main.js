@@ -96,16 +96,15 @@
 
   /* Hide nav on scroll down, show on scroll up */
   let lastScrollY = window.scrollY;
-  const SCROLL_THRESHOLD = 10;
 
   function checkNavVisibility() {
     if (nav.classList.contains('overlay-open')) return;
     const currentY = window.scrollY;
     const delta = currentY - lastScrollY;
 
-    if (delta > SCROLL_THRESHOLD && currentY > 100) {
+    if (delta > 10 && currentY > 100) {
       nav.classList.add('nav-hidden');
-    } else if (delta < -SCROLL_THRESHOLD) {
+    } else if (delta < -3) {
       nav.classList.remove('nav-hidden');
     }
 

@@ -220,11 +220,12 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 1000;
   mix-blend-mode: difference;
   transform: translateY(0);
-  transition: transform 0.4s var(--ease-out);
+  transition: transform 0.4s var(--ease-out), opacity 0.3s var(--ease-out);
 }
 
 .nav.nav-hidden {
   transform: translateY(-100%);
+  opacity: 0;
 }
 
 .nav.overlay-open {
@@ -1472,7 +1473,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .content {
-    margin-top: -8px;
+    margin-top: -20px;
   }
 
   .section-statement {
