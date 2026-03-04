@@ -232,6 +232,12 @@ h1, h2, h3, h4, h5, h6 {
   top: 0 !important;
 }
 
+.nav.overlay-open ~ .hero,
+.nav.overlay-open ~ .content,
+.nav.overlay-open ~ .footer {
+  visibility: hidden;
+}
+
 .nav-bar {
   display: flex;
   align-items: center;
