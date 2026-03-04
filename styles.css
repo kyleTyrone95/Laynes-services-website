@@ -897,12 +897,17 @@ h1, h2, h3, h4, h5, h6 {
   aspect-ratio: 4 / 3;
   overflow: hidden;
   border-radius: 12px;
-  clip-path: inset(100% 0 0 0);
-  transition: clip-path 1s var(--ease);
 }
 
-.case-card.revealed .case-img-wrap {
-  clip-path: inset(0 0 0 0);
+.case-card {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s var(--ease-out), transform 0.8s var(--ease-out);
+}
+
+.case-card.revealed {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .case-card-sm .case-img-wrap {
