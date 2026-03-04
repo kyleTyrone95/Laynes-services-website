@@ -219,11 +219,12 @@ h1, h2, h3, h4, h5, h6 {
   right: 0;
   z-index: 1000;
   mix-blend-mode: difference;
-  transition: top 0.35s ease;
+  transition: top 0.4s var(--ease-out), opacity 0.25s ease;
 }
 
 .nav.nav-hidden {
   top: -100px;
+  opacity: 0;
 }
 
 .nav.overlay-open {
