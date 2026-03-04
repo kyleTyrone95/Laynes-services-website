@@ -223,7 +223,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav.nav-hidden {
-  top: -100px;
+  top: -5vh;
 }
 
 .nav.overlay-open {
