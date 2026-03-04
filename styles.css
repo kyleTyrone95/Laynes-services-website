@@ -306,12 +306,22 @@ h1, h2, h3, h4, h5, h6 {
 .nav-overlay {
   position: fixed;
   inset: 0;
-  bottom: -100px;
   background: var(--text);
   clip-path: circle(0% at calc(100% - 52px) 42px);
   transition: clip-path 0.8s var(--ease-out);
   z-index: 1001;
   overflow: hidden;
+}
+
+.nav-overlay::after {
+  content: '';
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: -100px;
+  height: 100px;
+  background: var(--text);
+  z-index: 0;
 }
 
 .nav.overlay-open .nav-overlay {
