@@ -100,9 +100,23 @@
     }
   });
 
-  /* Close on link click */
+  /* Close on link click + scroll to section */
   document.querySelectorAll('.nav-ol-link').forEach(link => {
-    link.addEventListener('click', closeNav);
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopImmediatePropagation();
+      const href = link.getAttribute('href');
+      closeNav();
+      if (href && href !== '#') {
+        const target = document.querySelector(href);
+        if (target) {
+          setTimeout(() => {
+            if (window.__lenis) window.__lenis.scrollTo(target, { offset: 0, duration: 1.5 });
+            else target.scrollIntoView({ behavior: 'smooth' });
+          }, 50);
+        }
+      }
+    });
   });
 
   /* Hide nav on scroll down, show on scroll up */
