@@ -381,6 +381,7 @@
     'images/case-studies/case-1.webp',
     'images/case-studies/case-2.webp',
     'images/case-studies/case-3.webp',
+    'images/case-studies/case-4.webp',
   ];
 
   images.forEach((src, i) => {
