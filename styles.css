@@ -317,6 +317,10 @@ h1, h2, h3, h4, h5, h6 {
   clip-path: circle(150% at calc(100% - 52px) 42px);
 }
 
+.nav.overlay-open .nav-overlay.clip-done {
+  clip-path: none;
+}
+
 
 .nav-overlay-inner {
   display: flex;
@@ -1575,7 +1579,12 @@ h1, h2, h3, h4, h5, h6 {
 
   .nav {
     position: absolute;
+    top: 0;
     mix-blend-mode: normal;
+  }
+
+  .hero {
+    margin-top: -84px;
   }
 
   .nav.nav-hidden {

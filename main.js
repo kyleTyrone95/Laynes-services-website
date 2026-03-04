@@ -63,6 +63,7 @@
 (function initNav() {
   const nav = document.getElementById('nav');
   const toggle = document.getElementById('nav-toggle');
+  const overlay = document.getElementById('nav-overlay');
   if (!nav || !toggle) return;
 
   /* Wrap each overlay link text in a span for stagger animation */
@@ -71,17 +72,29 @@
     link.innerHTML = `<span>${text}</span>`;
   });
 
+  /* Remove clip-path after open animation to fix iOS viewport gaps */
+  if (overlay) {
+    overlay.addEventListener('transitionend', () => {
+      if (nav.classList.contains('overlay-open')) {
+        overlay.classList.add('clip-done');
+      }
+    });
+  }
+
+  function closeNav() {
+    if (overlay) overlay.classList.remove('clip-done');
+    nav.classList.remove('overlay-open');
+    document.body.style.overflow = '';
+    if (window.__lenis) window.__lenis.start();
+  }
+
   toggle.addEventListener('click', () => {
     const isOpen = nav.classList.contains('overlay-open');
 
     if (isOpen) {
-      nav.classList.remove('overlay-open');
-
-      document.body.style.overflow = '';
-      if (window.__lenis) window.__lenis.start();
+      closeNav();
     } else {
       nav.classList.add('overlay-open');
-
       document.body.style.overflow = 'hidden';
       if (window.__lenis) window.__lenis.stop();
     }
@@ -89,12 +102,7 @@
 
   /* Close on link click */
   document.querySelectorAll('.nav-ol-link').forEach(link => {
-    link.addEventListener('click', () => {
-      nav.classList.remove('overlay-open');
-
-      document.body.style.overflow = '';
-      if (window.__lenis) window.__lenis.start();
-    });
+    link.addEventListener('click', closeNav);
   });
 
   /* Hide nav on scroll down, show on scroll up */
