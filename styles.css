@@ -811,6 +811,8 @@ h1, h2, h3, h4, h5, h6 {
   pointer-events: none;
   z-index: 0;
   transition: opacity 1.2s var(--ease-expo);
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .cases-watermark.visible {
