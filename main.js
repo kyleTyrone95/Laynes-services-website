@@ -63,6 +63,7 @@
 (function initNav() {
   const nav = document.getElementById('nav');
   const toggle = document.getElementById('nav-toggle');
+  const backdrop = document.getElementById('nav-backdrop');
   if (!nav || !toggle) return;
 
   /* Wrap each overlay link text in a span for stagger animation */
@@ -76,10 +77,12 @@
 
     if (isOpen) {
       nav.classList.remove('overlay-open');
+      if (backdrop) backdrop.classList.remove('active');
       document.body.style.overflow = '';
       if (window.__lenis) window.__lenis.start();
     } else {
       nav.classList.add('overlay-open');
+      if (backdrop) backdrop.classList.add('active');
       document.body.style.overflow = 'hidden';
       if (window.__lenis) window.__lenis.stop();
     }
@@ -89,6 +92,7 @@
   document.querySelectorAll('.nav-ol-link').forEach(link => {
     link.addEventListener('click', () => {
       nav.classList.remove('overlay-open');
+      if (backdrop) backdrop.classList.remove('active');
       document.body.style.overflow = '';
       if (window.__lenis) window.__lenis.start();
     });

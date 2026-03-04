@@ -331,7 +331,7 @@ h1, h2, h3, h4, h5, h6 {
   transition: opacity 0.4s;
 }
 
-.nav.overlay-open .nav-backdrop {
+.nav-backdrop.active {
   opacity: 1;
 }
 
