@@ -93,6 +93,23 @@
       if (window.__lenis) window.__lenis.start();
     });
   });
+
+  /* Blend mode only on dark sections (partner CTA) */
+  const darkSections = document.querySelectorAll('.section-partner');
+  if (darkSections.length) {
+    function checkBlend() {
+      if (nav.classList.contains('overlay-open')) return;
+      const navH = nav.offsetHeight;
+      let onDark = false;
+      darkSections.forEach(sec => {
+        const r = sec.getBoundingClientRect();
+        if (r.top < navH && r.bottom > 0) onDark = true;
+      });
+      nav.classList.toggle('nav-blend', onDark);
+    }
+    window.addEventListener('scroll', checkBlend, { passive: true });
+    checkBlend();
+  }
 })();
 
 
