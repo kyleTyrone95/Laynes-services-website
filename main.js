@@ -369,6 +369,32 @@
 
 
 /* ==========================================================================
+   9c. CASE STUDIES — Auto-populate grid from image list
+   ========================================================================== */
+
+(function initCaseStudies() {
+  const grid = document.getElementById('cases-grid');
+  if (!grid) return;
+
+  /* ── Add or remove images here ── */
+  const images = [
+    'images/case-studies/case-1.webp',
+    'images/case-studies/case-2.webp',
+    'images/case-studies/case-3.webp',
+  ];
+
+  images.forEach((src, i) => {
+    const size = (i % 2 === 0) ? 'lg' : 'sm';
+    const card = document.createElement('div');
+    card.className = `case-card case-card-${size}`;
+    card.setAttribute('data-reveal-img', '');
+    card.innerHTML = `<div class="case-img-wrap"><img src="${src}" alt="Project ${i + 1}" loading="lazy"></div>`;
+    grid.appendChild(card);
+  });
+})();
+
+
+/* ==========================================================================
    10. IMAGE REVEALS + LIGHTBOX — Case card clip-path reveal (v3) + lightbox
    ========================================================================== */
 

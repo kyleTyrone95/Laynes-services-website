@@ -1584,7 +1584,18 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .nav {
+    position: absolute;
+    top: 0;
     mix-blend-mode: normal;
+  }
+
+  .hero {
+    margin-top: -7.5vh;
+  }
+
+  .nav.nav-hidden {
+    top: 0;
+    opacity: 1;
   }
 
   .nav-logo img {
