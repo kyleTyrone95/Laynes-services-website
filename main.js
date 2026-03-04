@@ -384,14 +384,33 @@
     'images/case-studies/case-4.webp',
   ];
 
-  images.forEach((src, i) => {
-    const size = (i % 2 === 0) ? 'lg' : 'sm';
-    const card = document.createElement('div');
-    card.className = `case-card case-card-${size}`;
-    card.setAttribute('data-reveal-img', '');
-    card.innerHTML = `<div class="case-img-wrap"><img src="${src}" alt="Project ${i + 1}" loading="lazy"></div>`;
-    grid.appendChild(card);
-  });
+  /* Build pairs: each row has one lg and one sm, alternating sides
+     Row 1: lg(col1) sm(col2)  |  Row 2: sm(col1) lg(col2)  |  repeat */
+  for (let i = 0; i < images.length; i += 2) {
+    const row = Math.floor(i / 2);
+    const isEvenRow = row % 2 === 0;
+    const gridRow = row + 1; /* CSS grid rows are 1-indexed */
+
+    /* Large card */
+    const lgCard = document.createElement('div');
+    lgCard.className = 'case-card case-card-lg';
+    lgCard.setAttribute('data-reveal-img', '');
+    lgCard.innerHTML = `<div class="case-img-wrap"><img src="${images[i]}" alt="Project ${i + 1}" loading="lazy"></div>`;
+    lgCard.style.gridRow = gridRow;
+    lgCard.style.gridColumn = isEvenRow ? '1' : '2';
+    grid.appendChild(lgCard);
+
+    /* Small card (if exists) */
+    if (images[i + 1]) {
+      const smCard = document.createElement('div');
+      smCard.className = 'case-card case-card-sm';
+      smCard.setAttribute('data-reveal-img', '');
+      smCard.innerHTML = `<div class="case-img-wrap"><img src="${images[i + 1]}" alt="Project ${i + 2}" loading="lazy"></div>`;
+      smCard.style.gridRow = gridRow;
+      smCard.style.gridColumn = isEvenRow ? '2' : '1';
+      grid.appendChild(smCard);
+    }
+  }
 })();
 
 

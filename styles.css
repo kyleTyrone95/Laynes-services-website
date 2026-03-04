@@ -879,7 +879,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Asymmetric grid — v3 style */
 .cases-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.3fr 0.7fr;
   gap: 24px;
 }
 
@@ -1554,6 +1554,11 @@ h1, h2, h3, h4, h5, h6 {
   .cases-grid {
     grid-template-columns: 1fr;
     gap: 32px;
+  }
+
+  .case-card {
+    grid-column: 1 !important;
+    grid-row: auto !important;
   }
 
   .case-card-sm {
