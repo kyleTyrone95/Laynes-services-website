@@ -563,7 +563,32 @@
 
 
 /* ==========================================================================
-   12. QUOTE WIZARD — 3-step form + Formspree submission
+   12. TOAST NOTIFICATIONS
+   ========================================================================== */
+
+function showToast(message, type) {
+  type = type || 'error';
+  var existing = document.querySelector('.toast');
+  if (existing) existing.remove();
+
+  var toast = document.createElement('div');
+  toast.className = 'toast toast-' + type;
+  toast.textContent = message;
+  document.body.appendChild(toast);
+
+  requestAnimationFrame(function() {
+    toast.classList.add('visible');
+  });
+
+  setTimeout(function() {
+    toast.classList.remove('visible');
+    setTimeout(function() { toast.remove(); }, 400);
+  }, 3000);
+}
+
+
+/* ==========================================================================
+   13. QUOTE WIZARD — 3-step form + Web3Forms submission
    ========================================================================== */
 
 (function initQuoteWizard() {
@@ -648,15 +673,18 @@
     const name = form.querySelector('input[name="name"]').value.trim();
     const email = form.querySelector('input[name="email"]').value.trim();
 
-    if (!name || !email) {
-      submitBtn.textContent = 'Name and email are required';
-      setTimeout(() => { submitBtn.textContent = 'Send Enquiry'; }, 2500);
+    if (!name) {
+      showToast('Please enter your name');
+      return;
+    }
+
+    if (!email) {
+      showToast('Please enter your email');
       return;
     }
 
     if (!isValidEmail(email)) {
-      submitBtn.textContent = 'Please enter a valid email';
-      setTimeout(() => { submitBtn.textContent = 'Send Enquiry'; }, 2500);
+      showToast('Please enter a valid email address');
       return;
     }
 
@@ -680,21 +708,20 @@
     })
     .then(response => {
       if (response.ok) {
-        submitBtn.textContent = "Sent! We'll be in touch.";
-
-        setTimeout(() => {
-          submitBtn.textContent = 'Send Enquiry';
-          submitBtn.disabled = false;
-          form.reset();
-          resetWizard();
-        }, 3000);
+        showToast("Sent! We'll be in touch.", 'success');
+        submitBtn.textContent = 'Send Enquiry';
+        submitBtn.disabled = false;
+        form.reset();
+        resetWizard();
       } else {
-        submitBtn.textContent = 'Something went wrong — try again';
+        showToast('Something went wrong — please try again');
+        submitBtn.textContent = 'Send Enquiry';
         submitBtn.disabled = false;
       }
     })
     .catch(() => {
-      submitBtn.textContent = 'Network error — try again';
+      showToast('Network error — please try again');
+      submitBtn.textContent = 'Send Enquiry';
       submitBtn.disabled = false;
     });
   });

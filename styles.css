@@ -1405,7 +1405,44 @@ body.lightbox-open .footer {
 
 
 /* ==========================================================================
-   15. TEXT REVEAL ANIMATIONS
+   15. TOAST NOTIFICATIONS
+   ========================================================================== */
+
+.toast {
+  position: fixed;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  padding: 14px 28px;
+  border-radius: 10px;
+  font-family: var(--ff);
+  font-size: 14px;
+  font-weight: 500;
+  z-index: 9999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s var(--ease-out), transform 0.4s var(--ease-out);
+}
+
+.toast.visible {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+  pointer-events: auto;
+}
+
+.toast-error {
+  background: var(--text);
+  color: var(--bg);
+}
+
+.toast-success {
+  background: var(--text);
+  color: var(--bg);
+}
+
+
+/* ==========================================================================
+   16. TEXT REVEAL ANIMATIONS
    ========================================================================== */
 
 .word-outer {
